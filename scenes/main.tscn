@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnr88r6sgxegf"]
+
+[ext_resource type="Texture2D" uid="uid://crb3mdhpsd1wm" path="res://sprites/hosp.png" id="1_ajjbj"]
+
+[node name="main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Hosp" type="Sprite2D" parent="Camera2D"]
+texture = ExtResource("1_ajjbj")

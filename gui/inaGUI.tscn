@@ -1,0 +1,76 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdifpugha4adt"]
+
+[ext_resource type="Script" path="res://scripts/gui.gd" id="1_qoygv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0f6k3"]
+font_size = 32
+
+[node name="inaGUI" type="Control"]
+layout_mode = 3
+anchor_right = 0.25
+anchor_bottom = 0.25
+offset_right = 864.0
+offset_bottom = 486.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.25, 0.25)
+script = ExtResource("1_qoygv")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 100.0
+offset_right = 1032.0
+offset_bottom = 548.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 133.0
+offset_top = 161.0
+offset_right = 1019.0
+offset_bottom = 494.0
+color = Color(1, 1, 1, 0.290196)
+
+[node name="title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 133.0
+offset_top = 105.0
+offset_right = 195.0
+offset_bottom = 150.0
+text = "title"
+label_settings = SubResource("LabelSettings_0f6k3")
+
+[node name="close" type="Button" parent="."]
+layout_mode = 0
+offset_left = 989.0
+offset_top = 111.0
+offset_right = 1019.0
+offset_bottom = 142.0
+text = "X"
+
+[node name="text" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 135.0
+offset_top = 163.0
+offset_right = 1017.0
+offset_bottom = 489.0
+text = "text"
+
+[node name="button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 799.0
+offset_top = 502.0
+offset_right = 1019.0
+offset_bottom = 539.0
+
+[node name="button1" type="Button" parent="."]
+layout_mode = 0
+offset_left = 570.0
+offset_top = 502.0
+offset_right = 790.0
+offset_bottom = 539.0
+
+[connection signal="pressed" from="close" to="." method="close"]
+[connection signal="pressed" from="button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="button1" to="." method="_on_button_1_pressed"]
