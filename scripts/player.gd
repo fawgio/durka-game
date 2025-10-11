@@ -65,16 +65,20 @@ func _physics_process(delta):
 	
 	collided = null
 	for index in get_slide_collision_count():
-		if get_slide_collision(index).get_collider() is InaObject:
+		if get_slide_collision(index).get_collider() is InaObject && not get_slide_collision(index).get_collider() is Enemy:
 			collided = get_slide_collision(index).get_collider()
 			
 	# Inventory
-	if Input.is_action_pressed("inv"):
-		GUI.visible = true
-		GUI.get_node("title").text = "Inventory"
-		GUI.get_node("button1").visible = false
-		GUI.get_node("button2").visible = false
-		GUI.get_node("text").text = "Clothing: " + clothing.name + "\nInventory: " + str(inv)
+	if Input.is_action_just_pressed("inv"):
+		if (GUI.get_node("title").text == "Inventory") && GUI.visible:
+			GUI.visible = false
+		else:
+			GUI.visible = true
+			GUI.get_node("title").text = "Inventory"
+			GUI.get_node("button1").visible = false
+			GUI.get_node("button2").visible = false
+			GUI.get_node("text").text = "Clothing: " + clothing.name + "\nInventory: " + str(inv)
+		
 	
 	# GUI Button Press
 	if GUI.visible:

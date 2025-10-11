@@ -1,33 +1,14 @@
-extends CharacterBody2D
+extends NPC
 class_name Enemy
 
-const SPEED = 300.0
-const SIGHT = 40
-const hurtDelay = 1.0
-const pointDelay = 1.0
+var SIGHT = 40
+var hurtDelay = 1.0
 
 var seenPlayer = 0.0
 var hurtTimeout = hurtDelay
-var pointTimeout = pointDelay
-
-@export var points : Array[Vector2] = [position + Vector2(0,-20), position + Vector2(-20,0), position + Vector2(0,20), position + Vector2(20,0)]
-var i = 0
-
-@onready var plr = get_node("../player")
-@onready var spr : AnimatedSprite2D = get_node("spr")
 
 func _ready():
-	position = Vector2(0,10)
-
-func canSee(obj):
-	var q
-	if obj is CharacterBody2D:
-		q = PhysicsRayQueryParameters2D.create(global_position,obj.global_position)
-		q.exclude = [self,obj]
-	elif obj is Vector2:
-		q = PhysicsRayQueryParameters2D.create(global_position,obj+global_position-position)
-		q.exclude = [self]
-	return get_world_2d().direct_space_state.intersect_ray(q).is_empty()
+	points = [position + Vector2(0,-20), position + Vector2(-20,0), position + Vector2(0,20), position + Vector2(20,0)]
 	
 func canSeeHiddenPlayer():
 	return canSee(plr)
@@ -48,18 +29,7 @@ func _physics_process(delta):
 	
 	# Idle movement
 	if seenPlayer <= 0:
-		if (abs(points[i] - position).x < 5 && abs(points[i] - position).y < 5):
-			pointTimeout += delta
-			if pointTimeout >= pointDelay:
-				i += 1
-				if i == points.size():
-					i = 0
-				pointTimeout = 0
-		else:
-			if canSee(points[i]):
-				velocity = position.direction_to(points[i]) * SPEED / 2
-			else:
-				position = points[i]
+		move(delta)
 	
 	# Animations
 	var anim
