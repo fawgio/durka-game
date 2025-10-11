@@ -10,7 +10,8 @@
 
 An open-source game made for Godot Wild Jam 82 about stealing money from rich person who was sent to a mental hospital, trying to being unseen.
 ## Installation
-You can install Durka from GitHub Releases or Itch.io or build from source.
+You will be able to install Durka from GitHub Releases or Itch.io.
+Now only can build from source.
 ## Building from source
 You can build Durka by yourself. For Windows, replace "Linux" with "Windows Desktop" in the following code.
 ```bash
