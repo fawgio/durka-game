@@ -1,6 +1,6 @@
 [gd_scene load_steps=35 format=3 uid="uid://mmrryhuhvy3r"]
 
-[ext_resource type="Script" uid="uid://cobimuguia3jc" path="res://scenes/game.gd" id="1_trtic"]
+[ext_resource type="Script" uid="uid://cobimuguia3jc" path="res://scripts/game.gd" id="1_trtic"]
 [ext_resource type="Texture2D" uid="uid://gpwh3psjbu8e" path="res://tiles.png" id="8_o1wbe"]
 [ext_resource type="Script" uid="uid://dkun4cooirg1x" path="res://scripts/door.gd" id="11_8qhb1"]
 [ext_resource type="Texture2D" uid="uid://d26f0hixc63w0" path="res://icon.svg" id="12_ai5tw"]

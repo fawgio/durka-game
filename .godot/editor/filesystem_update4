@@ -1,13 +1,3 @@
 res://scenes/game.tscn
-res://scenes/test2.tscn
-res://scripts/npc.gd
-res://scripts/closet.gd
 res://scenes/main.tscn
-res://scripts/mainmenu.gd
-res://scenes/multi.tscn
 res://scripts/sidemenu.gd
-res://scripts/singleton.gd
-res://scenes/game.gd
-res://scenes/player.tscn
-res://scripts/player.gd
-res://scripts/enemy.gd
