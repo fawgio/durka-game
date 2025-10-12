@@ -3,7 +3,7 @@ extends InaObject
 @onready var stored = plr.CLOTHING.halat
 
 func _ready() -> void:
-	title = "Closet"
+	title = "Hanger"
 	text = "You can get or put your clothing here \n Inventory: " + stored.name
 	buttons = ["Get clothing","Put clothing"]
 	funcs = [

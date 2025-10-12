@@ -53,7 +53,7 @@ func _physics_process(delta):
 	else:
 		spr.flip_h = 0
 		
-	move_and_slide()
+	relocate()
 	
 	# Colliding
 	for index in get_slide_collision_count():

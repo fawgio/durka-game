@@ -40,5 +40,13 @@ func move(delta):
 
 func _physics_process(delta):
 	move(delta)
-	move_and_slide()
+	relocate()
+
+func relocate():
+	if Singleton.user_id == 0:
+		move_and_slide()
+		rpc("_set_pos",global_transform.origin)
+
+@rpc("any_peer") func _set_pos(ori):
+	global_transform.origin = ori
 	

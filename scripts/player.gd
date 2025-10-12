@@ -13,6 +13,10 @@ var inv = []
 var clothing = CLOTHING.no
 var lives = 3
 
+var peer_list = []
+
+var user_id = -1
+
 var collided
 
 @onready var spr : AnimatedSprite2D = get_node("spr")
@@ -106,4 +110,19 @@ func _physics_process(delta):
 	else:
 		spr.flip_h = 0
 	
-	move_and_slide()
+	if user_id == Singleton.user_id:
+		move_and_slide()
+		rpc("_set_pos",global_transform.origin)
+		rpc("_set_peers",peer_list)
+
+func _ready() -> void:
+	if user_id != Singleton.user_id:
+		$cam.enabled = false
+		$gameGUI.hide()
+		$inaGUI.hide()
+
+@rpc("any_peer") func _set_pos(ori):
+	global_transform.origin = ori
+	
+@rpc("any_peer") func _set_peers(peers):
+	peer_list = peers

@@ -1,0 +1,78 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlbv0jgnoutnd"]
+
+[ext_resource type="Script" uid="uid://b6gpdf455nnjr" path="res://scripts/sidemenu.gd" id="1_shvxc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_x64or"]
+font_size = 50
+outline_size = 37
+outline_color = Color(0, 0, 0, 1)
+
+[node name="multi" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_shvxc")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -10
+layout_mode = 0
+offset_left = -592.0
+offset_top = -342.0
+offset_right = 589.0
+offset_bottom = 337.0
+color = Color(0.8666667, 0.8666667, 0.30980393, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = -139.0
+offset_top = -319.0
+offset_right = 155.0
+offset_bottom = -255.0
+theme_override_font_sizes/font_size = 100
+text = "Multiplayer "
+label_settings = SubResource("LabelSettings_x64or")
+
+[node name="exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 353.0
+offset_top = 257.0
+offset_right = 572.0
+offset_bottom = 313.0
+theme_override_font_sizes/font_size = 32
+text = "Main Menu"
+
+[node name="host" type="Button" parent="."]
+layout_mode = 0
+offset_left = -86.0
+offset_top = -51.0
+offset_right = 87.0
+offset_bottom = -4.0
+theme_override_font_sizes/font_size = 32
+text = "Host game"
+
+[node name="join" type="Button" parent="."]
+layout_mode = 0
+offset_left = -78.0
+offset_top = 3.0
+offset_right = 81.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 32
+text = "Join game"
+
+[node name="ip" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = -565.0
+offset_top = 3.0
+offset_right = -82.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 32
+placeholder_text = "127.0.0.1"
+
+[connection signal="pressed" from="exit" to="." method="exit"]
+[connection signal="pressed" from="host" to="." method="host_game"]
+[connection signal="pressed" from="join" to="." method="join_game"]

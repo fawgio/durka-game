@@ -1,6 +1,9 @@
+LineEdit
+TextEdit
+Node2D
+Button
 Sprite2D
 RichTextLabel
-Button
 CenterContainer
 HBoxContainer
 ItemList
@@ -10,6 +13,3 @@ GridContainer
 VBoxContainer
 Control
 HFlowContainer
-HSplitContainer
-CheckBox
-HSlider
