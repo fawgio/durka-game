@@ -35,27 +35,27 @@ scale = Vector2(0.25, 0.25)
 [node name="start" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
-text = "Start"
+text = "M_START"
 
 [node name="multi" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
-text = "Muliplayer"
+text = "M_MULTI"
 
 [node name="opt" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
-text = "Options"
+text = "M_OPTIONS"
 
 [node name="cred" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
-text = "Credits"
+text = "M_CREDITS"
 
 [node name="exit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
-text = "Exit"
+text = "M_EXIT"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0

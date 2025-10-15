@@ -25,7 +25,7 @@ func add_player(id,pname = "player"+str(players)):
 	var player = preload("res://scenes/player.tscn").instantiate()
 	player.name = pname if id != 0 else "player"
 	player.user_id = id
-	player.global_position = Vector2(-59,-40)
+	player.global_position = Vector2(-59,140)
 	add_child(player)
 	players+=1
 	print("	Add player, id "+str(player.user_id) + ", count "+str(players))

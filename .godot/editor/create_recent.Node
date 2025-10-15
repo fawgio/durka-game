@@ -1,3 +1,7 @@
+RemappingButton
+AudioStreamPlayer      - Matches the "music" keyword.
+AudioStreamPlayer2D
+Label
 LineEdit
 TextEdit
 Node2D
@@ -8,8 +12,4 @@ CenterContainer
 HBoxContainer
 ItemList
 TabBar
-Label
 GridContainer
-VBoxContainer
-Control
-HFlowContainer

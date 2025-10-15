@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bomali7k4xhkj"]
+[gd_scene load_steps=6 format=3 uid="uid://bomali7k4xhkj"]
 
 [ext_resource type="Script" uid="uid://b6gpdf455nnjr" path="res://scripts/sidemenu.gd" id="1_c2u1v"]
+[ext_resource type="Script" uid="uid://c2eyvc5rvt4dn" path="res://scripts/control.gd" id="2_yjkok"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_sx3uy"]
 font_size = 50
@@ -49,9 +50,10 @@ offset_left = -571.0
 offset_top = -255.0
 offset_right = 572.0
 offset_bottom = 252.0
-current_tab = 0
+current_tab = 2
 
 [node name="Graphics & Window" type="TabBar" parent="TabContainer"]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 
@@ -73,7 +75,7 @@ theme_override_font_sizes/font_size = 32
 text = "V-Sync
 "
 
-[node name="vert2" type="CheckButton" parent="TabContainer/Graphics & Window/VBoxContainer"]
+[node name="fps" type="CheckButton" parent="TabContainer/Graphics & Window/VBoxContainer"]
 z_index = 1
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
@@ -113,6 +115,8 @@ label_settings = SubResource("LabelSettings_yjkok")
 
 [node name="master" type="HSlider" parent="TabContainer/Audio/GridContainer"]
 layout_mode = 2
+min_value = -20.0
+max_value = 20.0
 
 [node name="Label2" type="Label" parent="TabContainer/Audio/GridContainer"]
 layout_mode = 2
@@ -121,6 +125,8 @@ label_settings = SubResource("LabelSettings_yjkok")
 
 [node name="music" type="HSlider" parent="TabContainer/Audio/GridContainer"]
 layout_mode = 2
+min_value = -20.0
+max_value = 20.0
 
 [node name="Label3" type="Label" parent="TabContainer/Audio/GridContainer"]
 layout_mode = 2
@@ -129,6 +135,8 @@ label_settings = SubResource("LabelSettings_yjkok")
 
 [node name="sfx" type="HSlider" parent="TabContainer/Audio/GridContainer"]
 layout_mode = 2
+min_value = -20.0
+max_value = 20.0
 
 [node name="mute" type="CheckBox" parent="TabContainer/Audio/GridContainer"]
 layout_mode = 2
@@ -140,7 +148,6 @@ text = "                     "
 label_settings = SubResource("LabelSettings_yjkok")
 
 [node name="Controls & Gameplay" type="TabBar" parent="TabContainer"]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 2
 
@@ -169,7 +176,7 @@ popup/item_2/id = 2
 
 [node name="GridContainer" type="GridContainer" parent="TabContainer/Controls & Gameplay/VBoxContainer"]
 layout_mode = 2
-columns = 2
+columns = 4
 
 [node name="Label" type="Label" parent="TabContainer/Controls & Gameplay/VBoxContainer/GridContainer"]
 layout_mode = 2
@@ -179,6 +186,8 @@ text = "Move up"
 [node name="up" type="Button" parent="TabContainer/Controls & Gameplay/VBoxContainer/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
+script = ExtResource("2_yjkok")
+metadata/_custom_type_script = "uid://c2eyvc5rvt4dn"
 
 [node name="Label2" type="Label" parent="TabContainer/Controls & Gameplay/VBoxContainer/GridContainer"]
 layout_mode = 2
@@ -188,6 +197,8 @@ text = "Move left"
 [node name="left" type="Button" parent="TabContainer/Controls & Gameplay/VBoxContainer/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
+script = ExtResource("2_yjkok")
+metadata/_custom_type_script = "uid://c2eyvc5rvt4dn"
 
 [node name="Label3" type="Label" parent="TabContainer/Controls & Gameplay/VBoxContainer/GridContainer"]
 layout_mode = 2
@@ -197,6 +208,8 @@ text = "Move down"
 [node name="down" type="Button" parent="TabContainer/Controls & Gameplay/VBoxContainer/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
+script = ExtResource("2_yjkok")
+metadata/_custom_type_script = "uid://c2eyvc5rvt4dn"
 
 [node name="Label4" type="Label" parent="TabContainer/Controls & Gameplay/VBoxContainer/GridContainer"]
 layout_mode = 2
@@ -206,6 +219,8 @@ text = "Move right"
 [node name="right" type="Button" parent="TabContainer/Controls & Gameplay/VBoxContainer/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
+script = ExtResource("2_yjkok")
+metadata/_custom_type_script = "uid://c2eyvc5rvt4dn"
 
 [node name="Label5" type="Label" parent="TabContainer/Controls & Gameplay/VBoxContainer/GridContainer"]
 layout_mode = 2
@@ -215,6 +230,8 @@ text = "Interact"
 [node name="ina" type="Button" parent="TabContainer/Controls & Gameplay/VBoxContainer/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
+script = ExtResource("2_yjkok")
+metadata/_custom_type_script = "uid://c2eyvc5rvt4dn"
 
 [node name="Label6" type="Label" parent="TabContainer/Controls & Gameplay/VBoxContainer/GridContainer"]
 layout_mode = 2
@@ -224,6 +241,8 @@ text = "Hide"
 [node name="hide" type="Button" parent="TabContainer/Controls & Gameplay/VBoxContainer/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
+script = ExtResource("2_yjkok")
+metadata/_custom_type_script = "uid://c2eyvc5rvt4dn"
 
 [node name="Label7" type="Label" parent="TabContainer/Controls & Gameplay/VBoxContainer/GridContainer"]
 layout_mode = 2
@@ -233,6 +252,8 @@ text = "Leave object"
 [node name="exina" type="Button" parent="TabContainer/Controls & Gameplay/VBoxContainer/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
+script = ExtResource("2_yjkok")
+metadata/_custom_type_script = "uid://c2eyvc5rvt4dn"
 
 [node name="Label8" type="Label" parent="TabContainer/Controls & Gameplay/VBoxContainer/GridContainer"]
 layout_mode = 2
@@ -242,6 +263,8 @@ text = "Click button 1"
 [node name="b1p" type="Button" parent="TabContainer/Controls & Gameplay/VBoxContainer/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
+script = ExtResource("2_yjkok")
+metadata/_custom_type_script = "uid://c2eyvc5rvt4dn"
 
 [node name="Label9" type="Label" parent="TabContainer/Controls & Gameplay/VBoxContainer/GridContainer"]
 layout_mode = 2
@@ -251,6 +274,8 @@ text = "Click button 2"
 [node name="b2p" type="Button" parent="TabContainer/Controls & Gameplay/VBoxContainer/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
+script = ExtResource("2_yjkok")
+metadata/_custom_type_script = "uid://c2eyvc5rvt4dn"
 
 [node name="Label10" type="Label" parent="TabContainer/Controls & Gameplay/VBoxContainer/GridContainer"]
 layout_mode = 2
@@ -260,6 +285,8 @@ text = "Inventory"
 [node name="inv" type="Button" parent="TabContainer/Controls & Gameplay/VBoxContainer/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
+script = ExtResource("2_yjkok")
+metadata/_custom_type_script = "uid://c2eyvc5rvt4dn"
 
 [node name="Language" type="TabBar" parent="TabContainer"]
 visible = false
@@ -283,4 +310,12 @@ offset_bottom = 313.0
 theme_override_font_sizes/font_size = 32
 text = "Main Menu"
 
+[connection signal="toggled" from="TabContainer/Graphics & Window/VBoxContainer/full" to="." method="full"]
+[connection signal="toggled" from="TabContainer/Graphics & Window/VBoxContainer/vert" to="." method="vsync"]
+[connection signal="toggled" from="TabContainer/Graphics & Window/VBoxContainer/fps" to="." method="fps"]
+[connection signal="value_changed" from="TabContainer/Audio/GridContainer/master" to="." method="vol"]
+[connection signal="value_changed" from="TabContainer/Audio/GridContainer/music" to="." method="muz"]
+[connection signal="value_changed" from="TabContainer/Audio/GridContainer/sfx" to="." method="sfx"]
+[connection signal="toggled" from="TabContainer/Audio/GridContainer/mute" to="." method="mut"]
+[connection signal="item_selected" from="TabContainer/Language/ItemList" to="." method="lok"]
 [connection signal="pressed" from="exit" to="." method="exit"]

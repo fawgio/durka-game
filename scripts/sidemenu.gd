@@ -6,6 +6,31 @@ func exit():
 
 func meta_click(meta):
 	OS.shell_open(str(meta))
+	
+func full(b):
+	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED if !b else DisplayServer.WINDOW_MODE_FULLSCREEN)
+	
+func vsync(b):
+	DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED if !b else DisplayServer.VSYNC_ENABLED)
+	
+func fps(b):
+	Singleton.fpsVisible = b
+	
+func vol(value):
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), value)
+	
+func muz(value):
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Music"), value)
+
+func sfx(value):
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"), value)
+
+func mut(b):
+	AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), b)
+	
+func lok(index):
+	TranslationServer.set_locale("ru" if index == 0 else "en")
+
 
 func host_game():
 	var server = ENetMultiplayerPeer.new()

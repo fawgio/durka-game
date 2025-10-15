@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://b11g10hcexqx0"]
+
+[ext_resource type="Script" uid="uid://cpas0tvqtfbo" path="res://scripts/fps.gd" id="1_jtrh3"]
+
+[node name="Fps" type="Label"]
+visible = false
+z_index = 1000
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -569.0
+offset_top = -324.0
+offset_right = -569.0
+offset_bottom = -324.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+text = "ww"
+script = ExtResource("1_jtrh3")

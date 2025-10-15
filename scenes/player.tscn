@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://gl3m4rbe71tm"]
+[gd_scene load_steps=24 format=3 uid="uid://gl3m4rbe71tm"]
 
 [ext_resource type="Script" uid="uid://budint7stixke" path="res://scripts/player.gd" id="1_ur7pv"]
 [ext_resource type="Texture2D" uid="uid://ifkxcudecpe6" path="res://sprites/burglar_halat_walking_down.png" id="2_y4r1p"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bd05rgugifrba" path="res://sprites/burglar_walking_up.png" id="7_oprun"]
 [ext_resource type="PackedScene" uid="uid://do7ogp632sa8s" path="res://gui/gameGUI.tscn" id="8_a8ls1"]
 [ext_resource type="PackedScene" uid="uid://cdifpugha4adt" path="res://gui/inaGUI.tscn" id="9_qfm1y"]
+[ext_resource type="PackedScene" uid="uid://b11g10hcexqx0" path="res://gui/fps.tscn" id="10_y4r1p"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fulsm"]
 radius = 6.0
@@ -166,3 +167,11 @@ offset_left = -143.75
 offset_top = -80.5
 offset_right = 720.25
 offset_bottom = 405.5
+
+[node name="Fps" parent="." instance=ExtResource("10_y4r1p")]
+visible = true
+offset_left = -141.0
+offset_top = -79.0
+offset_right = -116.0
+offset_bottom = -59.0
+scale = Vector2(0.25, 0.25)
