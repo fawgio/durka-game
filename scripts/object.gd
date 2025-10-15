@@ -12,6 +12,7 @@ class_name InaObject
 		GUI.visible = false,func b2():
 		plr.free()]
 @export var inaFunc : Callable = func inaFunc(): #called on interaction
+	GUI.close_call = exit
 	GUI.visible = true #show GUI
 	GUI.get_node("title").text = title #set title
 	GUI.get_node("button1").visible = true #show button 1

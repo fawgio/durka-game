@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://heoloaibe7h"
-path="res://.godot/imported/b5.png-5a78ea72306ec8a2c992ab8db8305756.ctex"
+uid="uid://ys2fyxfbw8tv"
+path="res://.godot/imported/burglar_halat_walking_up.png-0ed80f90b39347a251378220ea1498a2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/b5.png"
-dest_files=["res://.godot/imported/b5.png-5a78ea72306ec8a2c992ab8db8305756.ctex"]
+source_file="res://sprites/burglar_halat_walking_up.png"
+dest_files=["res://.godot/imported/burglar_halat_walking_up.png-0ed80f90b39347a251378220ea1498a2.ctex"]
 
 [params]
 

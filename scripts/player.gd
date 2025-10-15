@@ -59,19 +59,22 @@ func _physics_process(delta):
 			speed = WALKING_SPEED
 		
 	# Interaction
-	log.text = ""
-	if collided != null:
-		log.text = "["+InputMap.action_get_events("ina")[0].as_text()+"] to interact with "+collided.title
-		if Input.is_action_just_pressed("ina"):
-			collided.interact()
-		if direction != Vector2.ZERO || Input.is_action_just_pressed("exina"):
-			collided.exit()
-	
-	collided = null
-	for index in get_slide_collision_count():
-		if get_slide_collision(index).get_collider() is InaObject && not get_slide_collision(index).get_collider() is Enemy:
-			collided = get_slide_collision(index).get_collider()
-			
+	if !GUI.visible:
+		log.text = ""
+		if collided != null:
+			log.text = "["+InputMap.action_get_events("ina")[0].as_text()+"] to interact with "+collided.title
+			if Input.is_action_just_pressed("ina"):
+				collided.interact()
+			if direction != Vector2.ZERO || Input.is_action_just_pressed("exina"):
+				collided.exit()
+		
+		collided = null
+		for index in get_slide_collision_count():
+			if index >= 1:
+				pass
+			if get_slide_collision(index).get_collider() is InaObject && not get_slide_collision(index).get_collider() is Enemy:
+				collided = get_slide_collision(index).get_collider()
+				
 	# Inventory
 	if Input.is_action_just_pressed("inv"):
 		if (GUI.get_node("title").text == "Inventory") && GUI.visible:
@@ -120,6 +123,10 @@ func _ready() -> void:
 		$cam.enabled = false
 		$gameGUI.hide()
 		$inaGUI.hide()
+		
+func addItem(item):
+	inv.append(item)
+	log.text = "+1 "+item
 
 @rpc("any_peer") func _set_pos(ori):
 	global_transform.origin = ori

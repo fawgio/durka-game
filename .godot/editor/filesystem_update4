@@ -1,3 +1,5 @@
 res://scenes/game.tscn
-res://scenes/main.tscn
-res://scripts/sidemenu.gd
+res://scripts/napoleon.gd
+res://scripts/emo.gd
+res://scripts/object.gd
+res://scripts/player.gd

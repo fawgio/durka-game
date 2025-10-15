@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dn5nbtilpx2dg"
-path="res://.godot/imported/b3.png-f77e3291528ae4cfb6523b1583a0eb5b.ctex"
+uid="uid://cg5md4fcwbsix"
+path="res://.godot/imported/burglar_hide.png-8879db7aba588db7a32da96e8a54070e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/b3.png"
-dest_files=["res://.godot/imported/b3.png-f77e3291528ae4cfb6523b1583a0eb5b.ctex"]
+source_file="res://sprites/burglar_hide.png"
+dest_files=["res://.godot/imported/burglar_hide.png-8879db7aba588db7a32da96e8a54070e.ctex"]
 
 [params]
 

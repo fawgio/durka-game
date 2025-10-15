@@ -3,8 +3,11 @@ extends Control
 var b2 
 var b1
 
-func close():
+var close_call = func close():
 	visible = false
+
+func close():
+	close_call.call()
 
 
 func _on_button_2_pressed():

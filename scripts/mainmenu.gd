@@ -15,7 +15,7 @@ func _ready() -> void:
 
 func start():
 	Singleton.user_id = 0
-	get_tree().root.add_child(level.instantiate())
+	get_tree().root.add_child( level.instantiate())
 	$cam.enabled = false
 	self.hide()
 	

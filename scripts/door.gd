@@ -26,6 +26,3 @@ func _process(delta):
 	get_node("spr").rotation = deg_to_rad(round(rad_to_deg(get_node("spr").rotation)))
 	if !open:
 		d = 1
-
-	
-	
