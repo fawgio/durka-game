@@ -1,9 +1,9 @@
 [gd_scene load_steps=47 format=3 uid="uid://mmrryhuhvy3r"]
 
 [ext_resource type="Script" uid="uid://cobimuguia3jc" path="res://scripts/game.gd" id="1_trtic"]
+[ext_resource type="Texture2D" uid="uid://drrtnqlb8ifxm" path="res://sprites/door.png.png" id="4_264po"]
 [ext_resource type="Texture2D" uid="uid://gpwh3psjbu8e" path="res://tiles.png" id="8_o1wbe"]
 [ext_resource type="Script" uid="uid://dkun4cooirg1x" path="res://scripts/door.gd" id="11_8qhb1"]
-[ext_resource type="Texture2D" uid="uid://d26f0hixc63w0" path="res://icon.svg" id="12_ai5tw"]
 [ext_resource type="Script" uid="uid://dxm0ifati1wf1" path="res://scripts/enemy.gd" id="13_wcd31"]
 [ext_resource type="Texture2D" uid="uid://bbnvgfymh1c6o" path="res://sprites/sanitar_move.png" id="14_1bvb4"]
 [ext_resource type="Texture2D" uid="uid://brr1d4xsd7b8g" path="res://sprites/sanitar_north.png" id="15_k1oc0"]
@@ -136,7 +136,7 @@ size = Vector2(20, 5)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("12_ai5tw")
+"texture": ExtResource("4_264po")
 }],
 "loop": true,
 "name": &"default",
@@ -373,10 +373,10 @@ position = Vector2(0, -7.75)
 shape = SubResource("RectangleShape2D_u8cgo")
 
 [node name="spr" type="AnimatedSprite2D" parent="room0/doors/door"]
-position = Vector2(-10, -10.25)
-scale = Vector2(0.157227, 0.0390625)
+position = Vector2(-10.000002, -10.250004)
+scale = Vector2(1.0000006, 1.0000013)
 sprite_frames = SubResource("SpriteFrames_m4c4g")
-offset = Vector2(63.2048, 63.9999)
+offset = Vector2(10.000019, 2.5)
 
 [node name="room1" type="Node2D" parent="."]
 position = Vector2(-155, -105)
@@ -407,10 +407,10 @@ position = Vector2(0, -7.75)
 shape = SubResource("RectangleShape2D_u8cgo")
 
 [node name="spr" type="AnimatedSprite2D" parent="room1/doors/door"]
-position = Vector2(-10, -10.25)
-scale = Vector2(0.157227, 0.0390625)
+position = Vector2(-10.000002, -10.250004)
+scale = Vector2(1.0000006, 1.0000013)
 sprite_frames = SubResource("SpriteFrames_m4c4g")
-offset = Vector2(63.2048, 63.9999)
+offset = Vector2(10.000019, 2.5)
 
 [node name="room2" type="Node2D" parent="."]
 position = Vector2(-212.5, -168)
@@ -441,10 +441,10 @@ position = Vector2(0.25, -7)
 shape = SubResource("RectangleShape2D_ntlq0")
 
 [node name="spr" type="AnimatedSprite2D" parent="room2/doors/door"]
-position = Vector2(2.5, -17)
-scale = Vector2(0.0351563, 0.15625)
+position = Vector2(-10.000002, -10.250004)
+scale = Vector2(1.0000006, 1.0000013)
 sprite_frames = SubResource("SpriteFrames_m4c4g")
-offset = Vector2(-63.9999, 64)
+offset = Vector2(10.000019, 2.5)
 
 [node name="room3" type="Node2D" parent="."]
 position = Vector2(-97.5, -168)
@@ -476,10 +476,10 @@ position = Vector2(0.25, -7)
 shape = SubResource("RectangleShape2D_ntlq0")
 
 [node name="spr" type="AnimatedSprite2D" parent="room3/doors/door"]
-position = Vector2(2.5, -17)
-scale = Vector2(0.0351563, 0.15625)
+position = Vector2(-10.000002, -10.250004)
+scale = Vector2(1.0000006, 1.0000013)
 sprite_frames = SubResource("SpriteFrames_m4c4g")
-offset = Vector2(-64, 64)
+offset = Vector2(10.000019, 2.5)
 
 [node name="room4" type="Node2D" parent="."]
 position = Vector2(-213, -268.5)
@@ -510,10 +510,10 @@ position = Vector2(0.25, -7)
 shape = SubResource("RectangleShape2D_ntlq0")
 
 [node name="spr" type="AnimatedSprite2D" parent="room4/doors/door"]
-position = Vector2(2.5, -17)
-scale = Vector2(0.0351563, 0.15625)
+position = Vector2(-10.000002, -10.250004)
+scale = Vector2(1.0000006, 1.0000013)
 sprite_frames = SubResource("SpriteFrames_m4c4g")
-offset = Vector2(-63.9999, 64)
+offset = Vector2(10.000019, 2.5)
 
 [node name="room5" type="Node2D" parent="."]
 position = Vector2(-213, -378.25)
@@ -544,10 +544,10 @@ position = Vector2(0.25, -7)
 shape = SubResource("RectangleShape2D_ntlq0")
 
 [node name="spr" type="AnimatedSprite2D" parent="room5/doors/door"]
-position = Vector2(2.5, -17)
-scale = Vector2(0.0351563, 0.15625)
+position = Vector2(-10.000002, -10.250004)
+scale = Vector2(1.0000006, 1.0000013)
 sprite_frames = SubResource("SpriteFrames_m4c4g")
-offset = Vector2(-63.9999, 64)
+offset = Vector2(10.000019, 2.5)
 
 [node name="room6" type="Node2D" parent="."]
 position = Vector2(-213, -513)
@@ -578,10 +578,10 @@ position = Vector2(0.25, -7)
 shape = SubResource("RectangleShape2D_ntlq0")
 
 [node name="spr" type="AnimatedSprite2D" parent="room6/doors/door"]
-position = Vector2(2.5, -17)
-scale = Vector2(0.0351563, 0.15625)
+position = Vector2(-10.000002, -10.250004)
+scale = Vector2(1.0000006, 1.0000013)
 sprite_frames = SubResource("SpriteFrames_m4c4g")
-offset = Vector2(-63.9999, 64)
+offset = Vector2(10.000019, 2.5)
 
 [node name="room7" type="Node2D" parent="."]
 position = Vector2(57.75, -268)
@@ -612,10 +612,10 @@ position = Vector2(0.25, -7)
 shape = SubResource("RectangleShape2D_ntlq0")
 
 [node name="spr" type="AnimatedSprite2D" parent="room7/doors/door"]
-position = Vector2(2.5, -17)
-scale = Vector2(0.0351563, 0.15625)
+position = Vector2(-10.000002, -10.250004)
+scale = Vector2(1.0000006, 1.0000013)
 sprite_frames = SubResource("SpriteFrames_m4c4g")
-offset = Vector2(-63.9999, 64)
+offset = Vector2(10.000019, 2.5)
 
 [node name="room8" type="Node2D" parent="."]
 position = Vector2(57.75, -383)
@@ -646,10 +646,10 @@ position = Vector2(0.25, -7)
 shape = SubResource("RectangleShape2D_ntlq0")
 
 [node name="spr" type="AnimatedSprite2D" parent="room8/doors/door"]
-position = Vector2(2.5, -17)
-scale = Vector2(0.0351563, 0.15625)
+position = Vector2(-10.000002, -10.250004)
+scale = Vector2(1.0000006, 1.0000013)
 sprite_frames = SubResource("SpriteFrames_m4c4g")
-offset = Vector2(-63.9999, 64)
+offset = Vector2(10.000019, 2.5)
 
 [node name="Hosp" type="Sprite2D" parent="."]
 visible = false

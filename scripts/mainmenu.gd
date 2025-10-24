@@ -20,13 +20,15 @@ func start():
 	self.hide()
 	
 func opt():
-	get_tree().root.add_child(options)
-	self.hide()
+	if Input.is_key_pressed(KEY_SHIFT):
+		get_tree().root.add_child(options)
+		self.hide()
 	
 func mult():
-	get_tree().root.add_child(multi)
-	$cam.enabled = false
-	self.hide()
+	if Input.is_key_pressed(KEY_SHIFT):
+		get_tree().root.add_child(multi)
+		$cam.enabled = false
+		self.hide()
 	
 func cred():
 	get_tree().root.add_child(credits)
