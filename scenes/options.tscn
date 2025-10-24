@@ -50,10 +50,9 @@ offset_left = -571.0
 offset_top = -255.0
 offset_right = 572.0
 offset_bottom = 252.0
-current_tab = 2
+current_tab = 0
 
 [node name="Graphics & Window" type="TabBar" parent="TabContainer"]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 
@@ -148,6 +147,7 @@ text = "                     "
 label_settings = SubResource("LabelSettings_yjkok")
 
 [node name="Controls & Gameplay" type="TabBar" parent="TabContainer"]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 2
 

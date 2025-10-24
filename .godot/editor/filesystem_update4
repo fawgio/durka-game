@@ -4,3 +4,4 @@ res://scripts/mainmenu.gd
 res://scripts/sidemenu.gd
 res://scenes/game.tscn
 res://scripts/game.gd
+res://scenes/options.tscn

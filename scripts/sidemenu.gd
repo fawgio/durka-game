@@ -52,12 +52,7 @@ func join_game():
 	else:
 		get_tree().get_multiplayer().multiplayer_peer = client
 		Singleton.user_id = get_tree().get_multiplayer().get_unique_id()
-		
-		
-func _ready() -> void:
-	get_tree().get_multiplayer().peer_connected.connect(func (id):
 		get_tree().root.add_child(preload("res://scenes/game.tscn").instantiate())
 		queue_free()
 		print("JOINING A GAME")
 		print("Your id "+str(Singleton.user_id))
-	)

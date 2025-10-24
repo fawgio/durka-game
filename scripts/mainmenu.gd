@@ -19,16 +19,22 @@ func start():
 	$cam.enabled = false
 	self.hide()
 	
-func opt():
+func _input(e : InputEvent):
 	if Input.is_key_pressed(KEY_SHIFT):
-		get_tree().root.add_child(options)
-		self.hide()
+		$VBoxContainer/opt.disabled = false
+		$VBoxContainer/multi.disabled = false
+	else:
+		$VBoxContainer/opt.disabled = true
+		$VBoxContainer/multi.disabled = true
+	
+func opt():
+	get_tree().root.add_child(options)
+	self.hide()
 	
 func mult():
-	if Input.is_key_pressed(KEY_SHIFT):
-		get_tree().root.add_child(multi)
-		$cam.enabled = false
-		self.hide()
+	get_tree().root.add_child(multi)
+	$cam.enabled = false
+	self.hide()
 	
 func cred():
 	get_tree().root.add_child(credits)
