@@ -11,7 +11,7 @@ const CLOTHING = {
 var hid = false
 var inv = []
 var clothing = CLOTHING.no
-var lives = 3
+var lives = 5
 
 var peer_list = []
 
@@ -65,15 +65,20 @@ func _physics_process(delta):
 			log.text = "["+InputMap.action_get_events("ina")[0].as_text()+"] to interact with "+collided.title
 			if Input.is_action_just_pressed("ina"):
 				collided.interact()
-			if direction != Vector2.ZERO || Input.is_action_just_pressed("exina"):
-				collided.exit()
-		
-		collided = null
-		for index in get_slide_collision_count():
-			if index >= 1:
-				pass
-			if get_slide_collision(index).get_collider() is InaObject && not get_slide_collision(index).get_collider() is Enemy:
-				collided = get_slide_collision(index).get_collider()
+				log.text = ""
+		elif Input.is_action_just_pressed("ina"):
+			if (inv.has("Bat")):
+				var bat = preload("res://scenes/bat.tscn").instantiate()
+				bat.position = position + Vector2(0,-10)
+				$"..".add_child(bat)
+	
+	if collided != null && (direction != Vector2.ZERO || Input.is_action_just_pressed("exina")):
+			collided.exit()
+	
+	collided = null
+	for index in get_slide_collision_count():
+		if get_slide_collision(index).get_collider() is InaObject && not get_slide_collision(index).get_collider() is Enemy:
+			collided = get_slide_collision(index).get_collider()
 				
 	# Inventory
 	if Input.is_action_just_pressed("inv"):

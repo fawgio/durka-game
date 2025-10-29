@@ -1,6 +1,8 @@
 extends InaObject
 
-@onready var stored = plr.CLOTHING.halat
+@export var cname = "halat"
+
+@onready var stored = plr.CLOTHING[cname]
 
 func _ready() -> void:
 	title = "Hanger"

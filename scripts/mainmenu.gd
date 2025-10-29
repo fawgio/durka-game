@@ -7,6 +7,7 @@ var multi
 
 func _ready() -> void:
 	level = preload("res://scenes/game.tscn")
+	#level = preload("res://scenes/game_r.tscn")
 	options = preload("res://scenes/options.tscn").instantiate()
 	credits = preload("res://scenes/credits.tscn").instantiate()
 	multi = preload("res://scenes/multi.tscn").instantiate()

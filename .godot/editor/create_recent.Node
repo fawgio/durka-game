@@ -1,14 +1,15 @@
+CharacterBody2D
+RigidBody2D
+Node2D
 Label
 RemappingButton
 AudioStreamPlayer      - Matches the "music" keyword.
 AudioStreamPlayer2D
 LineEdit
 TextEdit
-Node2D
 Button
 Sprite2D
 RichTextLabel
 CenterContainer
 HBoxContainer
 ItemList
-TabBar

@@ -144,7 +144,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ntlq0"]
-size = Vector2(4.5, 20)
+size = Vector2(20, 4.875)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_inisg"]
 radius = 6.75
@@ -433,11 +433,12 @@ color = Color(0, 0, 0, 1)
 [node name="doors" type="Node2D" parent="room2"]
 
 [node name="door" type="CharacterBody2D" parent="room2/doors"]
-position = Vector2(155, 75)
+position = Vector2(147.25, 68)
+rotation = 1.5707964
 script = ExtResource("11_8qhb1")
 
 [node name="col" type="CollisionShape2D" parent="room2/doors/door"]
-position = Vector2(0.25, -7)
+position = Vector2(0, -7.8125076)
 shape = SubResource("RectangleShape2D_ntlq0")
 
 [node name="spr" type="AnimatedSprite2D" parent="room2/doors/door"]
@@ -468,7 +469,8 @@ color = Color(0, 0, 0, 1)
 [node name="doors" type="Node2D" parent="room3"]
 
 [node name="door" type="CharacterBody2D" parent="room3/doors"]
-position = Vector2(154.5, 75)
+position = Vector2(146.75, 68)
+rotation = 1.5707964
 script = ExtResource("11_8qhb1")
 
 [node name="col" type="CollisionShape2D" parent="room3/doors/door"]
@@ -502,7 +504,8 @@ color = Color(0, 0, 0, 1)
 [node name="doors" type="Node2D" parent="room4"]
 
 [node name="door" type="CharacterBody2D" parent="room4/doors"]
-position = Vector2(155.5, 75.5)
+position = Vector2(147.75, 68.5)
+rotation = 1.5707964
 script = ExtResource("11_8qhb1")
 
 [node name="col" type="CollisionShape2D" parent="room4/doors/door"]
@@ -536,7 +539,8 @@ color = Color(0, 0, 0, 1)
 [node name="doors" type="Node2D" parent="room5"]
 
 [node name="door" type="CharacterBody2D" parent="room5/doors"]
-position = Vector2(155.5, 70.25)
+position = Vector2(147.75, 63.25)
+rotation = 1.5707964
 script = ExtResource("11_8qhb1")
 
 [node name="col" type="CollisionShape2D" parent="room5/doors/door"]
@@ -570,7 +574,8 @@ color = Color(0, 0, 0, 1)
 [node name="doors" type="Node2D" parent="room6"]
 
 [node name="door" type="CharacterBody2D" parent="room6/doors"]
-position = Vector2(155.5, 60)
+position = Vector2(147.75, 53)
+rotation = 1.5707964
 script = ExtResource("11_8qhb1")
 
 [node name="col" type="CollisionShape2D" parent="room6/doors/door"]
@@ -604,7 +609,8 @@ color = Color(0, 0, 0, 1)
 [node name="doors" type="Node2D" parent="room7"]
 
 [node name="door" type="CharacterBody2D" parent="room7/doors"]
-position = Vector2(-0.75, 75)
+position = Vector2(-8.5, 68)
+rotation = 1.5707964
 script = ExtResource("11_8qhb1")
 
 [node name="col" type="CollisionShape2D" parent="room7/doors/door"]
@@ -638,7 +644,8 @@ color = Color(0, 0, 0, 1)
 [node name="doors" type="Node2D" parent="room8"]
 
 [node name="door" type="CharacterBody2D" parent="room8/doors"]
-position = Vector2(-0.75, 75)
+position = Vector2(-8.5, 68)
+rotation = 1.5707964
 script = ExtResource("11_8qhb1")
 
 [node name="col" type="CollisionShape2D" parent="room8/doors/door"]
@@ -693,6 +700,7 @@ animation = &"full"
 [node name="closet2" type="CharacterBody2D" parent="."]
 position = Vector2(-68.25, -133)
 script = ExtResource("19_37s47")
+cname = "no"
 
 [node name="col" type="CollisionShape2D" parent="closet2"]
 shape = SubResource("RectangleShape2D_bt5mj")

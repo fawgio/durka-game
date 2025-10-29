@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://cqp5ykik8m52x"]
+
+[ext_resource type="Script" uid="uid://dkun4cooirg1x" path="res://scripts/door.gd" id="1_ffxv4"]
+[ext_resource type="Texture2D" uid="uid://drrtnqlb8ifxm" path="res://sprites/door.png.png" id="2_85yof"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_14vil"]
+size = Vector2(20, 5)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jxe34"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_85yof")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="room0" type="Node2D"]
+position = Vector2(-996.75, -56)
+
+[node name="parts" type="Control" parent="."]
+z_index = 10
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="roomPart1" type="ColorRect" parent="parts"]
+layout_mode = 0
+offset_left = 10.25
+offset_top = -96.0
+offset_right = 301.5
+offset_bottom = 66.25
+color = Color(0, 0, 0, 1)
+
+[node name="doors" type="Node2D" parent="."]
+
+[node name="door" type="CharacterBody2D" parent="doors"]
+position = Vector2(95, 75.25)
+script = ExtResource("1_ffxv4")
+
+[node name="col" type="CollisionShape2D" parent="doors/door"]
+position = Vector2(0, -7.75)
+shape = SubResource("RectangleShape2D_14vil")
+
+[node name="spr" type="AnimatedSprite2D" parent="doors/door"]
+position = Vector2(-10.000002, -10.250004)
+scale = Vector2(1.0000006, 1.0000013)
+sprite_frames = SubResource("SpriteFrames_jxe34")
+offset = Vector2(10.000019, 2.5)

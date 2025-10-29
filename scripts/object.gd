@@ -1,7 +1,7 @@
 extends CharacterBody2D
 class_name InaObject
 
-@onready var plr = get_tree().root.get_node("game/player")
+@onready var plr = get_tree().root.get_node("/root/game/player")
 @onready var GUI : Control = plr.get_node("inaGUI")
 
 @export var title : String= "Object"
@@ -37,3 +37,6 @@ func interact():
 
 func exit():
 	GUI.visible = false
+	
+func delete():
+	queue_free()
